@@ -1,0 +1,14 @@
+blinker
+click
+itsdangerous
+Jinja2
+MarkupSafe
+mysql-connector
+flask
+Werkzeug
+gunicorn
+
+flask_mysqldb
+
+
+

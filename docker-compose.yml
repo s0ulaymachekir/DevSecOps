@@ -1,0 +1,49 @@
+version : "3"
+services: 
+  app:
+     build: 
+        context: .
+     ports:
+        - "5000:5000"  
+     depends_on:
+      - mysqldb
+     restart: unless-stopped
+     networks:
+      - my-network
+    
+
+  mysqldb:
+    container_name: mysqlcontainerforapp
+    image: mysql:8.0
+    restart: always
+    volumes:
+      - $HOME/database:/var/lib/mysql
+    ports:
+      - 3307:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=55889528
+      - MYSQL_DATABASE=users
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=55889528
+
+    networks:
+      - my-network
+  phpmyadmin:
+     depends_on:
+      - mysqldb
+     image: phpmyadmin/phpmyadmin
+     restart: always
+     ports :
+       - 8083:80
+     environment:
+       - PMA_HOST=mysqldb
+       - MYSQL_ROOT_PASSWORD=55889528
+     networks:
+       - my-network
+networks:
+  my-network:
+     name: my-network
+     driver: bridge
+     
+volumes:
+  mariadb_data:
