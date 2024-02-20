@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="an">
+<head>
+    <title>Gestion des Disciplines</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styled.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='folders.png') }}" type="image/png">
+</head>
+<body>
+<div class ="barre-sup">
+        <div class="gauche">
+            <div class="logo">
+                    <img src="https://d2cljsw7d0z1ty.cloudfront.net/fileadmin/themes/default/img/logo-group-ips.svg" alt="Logo">
+                </div>
+        </div>
+    <div class="droit">
+            <a href="/home2" class="c0">Home</a>
+            <a href="/Gdiscipline" class="c1">Gestion des disciplines</a>
+            <a href="/Gmembres" class="c2">Gestion des membres</a>
+            <a href="/Grole" class="c3">Gestion des roles</a>
+            <a href="/Gprojects" class="c4">Gestion des projets</a>
+        <a href="/admin" class="c5">Profil Admin</a>
+
+        </div>
+    </div>
+    <h1>Gestion Des Disciplines</h1>
+<form action="/Gdiscipline" class="container">
+    <table>
+        <tr>
+            <th>Code</th>
+            <th>Description</th>
+            <th>Action</th>
+        </tr>
+        {% for row in disciplines %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>
+                    <a href="/modifierd/{{ row[0] }}" class="mod">Edit</a>
+                    <a href="/supprimerd/{{ row[0] }}" class="delete">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a href="/ajouterd" class="ajout">Add New</a>
+</form>
+</body>
+</html>

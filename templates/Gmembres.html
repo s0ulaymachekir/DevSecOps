@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="an">
+<head>
+    <title>Gestion des membres</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylem.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='folders.png') }}" type="image/png">
+</head>
+<body>
+<div class ="barre-sup">
+        <div class="gauche">
+            <div class="logo">
+                    <img src="https://d2cljsw7d0z1ty.cloudfront.net/fileadmin/themes/default/img/logo-group-ips.svg" alt="Logo">
+                </div>
+        </div>
+    <div class="droit">
+            <a href="/home2" class="c0">Home</a>
+            <a href="/Gdiscipline" class="c1">Gestion des disciplines</a>
+            <a href="/Gmembres" class="c2">Gestion des membres</a>
+            <a href="/Grole" class="c3">Gestion des roles</a>
+            <a href="/Gprojects" class="c4">Gestion des projets</a>
+            <a href="/admin" class="c5">Profil Admin</a>
+
+        </div>
+    </div>
+    <h1>Gestion Des Membres</h1>
+<form action="/Gmembres" class="container">
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Project Name</th>
+            <th>Role</th>
+            <th>Action</th>
+        </tr>
+        {% for row in users %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+                <td>
+                    <a href="/modifierm/{{ row[0] }}/{{ row[1] }}" class="modify">Edit</a>
+                    <a href="/supprimerm/{{ row[0] }}/{{ row[1] }}" class="delete">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a href="/ajouterm" class="ajoutm">Add New</a>
+</form>
+</body>
+</html>

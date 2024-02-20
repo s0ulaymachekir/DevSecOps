@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleh.css')}}"/>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='folders.png') }}" type="image/png">
+</head>
+<body>
+<form action="/home1" method="POST" class="main-body">
+    <div class ="barre-sup">
+        <div class="gauche">
+            <div class="logo">
+                    <img src="https://d2cljsw7d0z1ty.cloudfront.net/fileadmin/themes/default/img/logo-group-ips.svg" alt="Logo">
+                </div>
+        </div>
+        <div class="droit">
+            <a href="/login" class="buttoni">Sign-in</a>
+            <a href="/register" class="buttonu">Sign-up</a>
+        </div>
+    </div>
+    <div class="reste">
+        <div class="boxr">
+        <h1>Documents Management System</h1>
+            <h2>DMS</h2>
+        </div>
+    </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="icon" href="{{ url_for('static', filename='books.jpg') }}" type="image/jpg">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"/>
+    <title>Register</title>
+  </head>
+  <body>
+ <div class="main-body">
+
+<div class="logo">
+                    <img src="https://d2cljsw7d0z1ty.cloudfront.net/fileadmin/themes/default/img/logo-group-ips.svg" alt="Logo">
+                </div>
+<form action="/register" method="POST" class="container">
+ 
+    <div class="leftbox">
+    </div>
+    <div class="signup-form">
+      <h1>Sign Up</h1>
+        <div class="inputBox">
+                <input type="text" name="First Name" autocomplete="off" required>
+            <label for="Name"> First Name </label>
+        </div>
+       <div class="inputBox">
+                <input type="text" name="Last Name" autocomplete="off" required>
+            <label for="Name">Last Name </label>
+        </div>
+        <div class="inputBox">
+         <input type="email" name="Email" autocomplete="off" required>
+                    <label for="email">Email</label>
+        </div>
+        <div class="inputBox">
+                <input type="text" name="Project Name" autocomplete="off" required>
+            <label for="Name">Project Name </label>
+        </div>
+       <div class="inputBox">
+           <select name="Category" required>
+                <option value="" disabled selected></option>
+                <option value="approvateur">Approval</option>
+                <option value="verificateur">Reviewer</option>
+                <option value="auteur">Author</option>
+            </select>
+            <label for="Category">roles</label>
+        </div>
+<div class="inputBox">
+        <input type="password" name="Password" autocomplete="off" required>
+                    <label for="password">Password</label>
+        </div>
+
+      
+      
+      <button class="button">Register</button>
+    </div>
+</form>
+</div>
+
+  </body>
+</html>

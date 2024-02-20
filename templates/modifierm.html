@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="an">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="{{ url_for('static', filename='tasks.jpg') }}" type="image/jpg">
+    <title>Edit Member</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styleam.css') }}">
+</head>
+<body>
+<div class="barre-sup">
+    <div class="gauche">
+        <div class="logo">
+            <img src="https://d2cljsw7d0z1ty.cloudfront.net/fileadmin/themes/default/img/logo-group-ips.svg" alt="Logo">
+        </div>
+    </div>
+    <div class="droit">
+        <a href="/home2" class="c0">Home</a>
+        <a href="/Gdiscipline" class="c1">Gestion des disciplines</a>
+        <a href="/Gmembres" class="c2">Gestion des membres</a>
+        <a href="/Grole" class="c3">Gestion des roles</a>
+        <a href="/Gprojects" class="c4">Gestion des projets</a>
+        <a href="/admin" class="c5">Profil Admin</a>
+    </div>
+</div>
+
+<form action="/modifierm/{{ user[0] }}/{{ user[1] }}" method="post" class="container">
+    <h1>Edit Member</h1>
+    <div class="inputBox">
+        <input type="text" name="First_Name" autocomplete="off" required>
+        <label for="fname"> First Name </label>
+    </div>
+    <div class="inputBox">
+        <input type="text" name="Last_Name" autocomplete="off" required>
+        <label for="lname">Last Name </label>
+    </div>
+    <div class="inputBox">
+        <input type="email" name="Email" autocomplete="off" required>
+        <label for="email">Email</label>
+    </div>
+    <div class="inputBox">
+        <input type="text" name="Project_Name" autocomplete="off" required>
+        <label for="pname">Project Name </label>
+    </div>
+    <div class="inputBox">
+        <select name="Category" required>
+            <option value="" disabled selected></option>
+            <option value="approvateur">Approval</option>
+            <option value="verificateur">Reviewer</option>
+            <option value="auteur">Author</option>
+        </select>
+        <label for="Category">Roles</label>
+    </div>
+    <div class="inputBox">
+        <input type="password" name="Password" autocomplete="off" required>
+        <label for="password">Password</label>
+    </div>
+    <button type="submit" class="button">Modify</button>
+</form>
+
+</body>
+</html>

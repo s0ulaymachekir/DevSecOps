@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="an">
+<head>
+    <link rel="icon" href="{{ url_for('static', filename='profile.jpg') }}" type="image/jpg">
+    <title>Administration page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylea.css') }}">
+</head>
+<body>
+        <div class ="barre-sup">
+        <div class="gauche">
+            <div class="logo">
+                    <img src="https://d2cljsw7d0z1ty.cloudfront.net/fileadmin/themes/default/img/logo-group-ips.svg" alt="Logo">
+                </div>
+        </div>
+    <div class="droit">
+            <a href="/" class="c0">Home</a>
+        <a href="/admin" class="c5">Profil Admin</a>
+
+        </div>
+    </div>
+        <form action="/lod" method="GET" class="container">
+            <h1>Project Informations</h1>
+        <h2>List Of Documents :</h2>
+        <p><strong style="color: darkblue;">Ref :</strong> {{ data[0] }}</p>
+        <p><strong style="color: darkblue;">Ref_com :</strong> {{ data[1] }}</p>
+        <p><strong style="color: darkblue;">Titre :</strong> {{ data[2] }}</p>
+        <p><strong style="color: darkblue;">Date_Deb :</strong> {{ data[3] }}</p>
+        <p><strong style="color: darkblue;">Date_fin :</strong> {{ data[4] }}</p>
+        <p><strong style="color: darkblue;">Coordinator :</strong> {{ data[5] }}</p>
+<dialog id="addDisciplinePopup">
+            <form action="/ajouterd" method="post">
+                <label for="Code">Code:</label>
+                <input type="text" name="Code" required>
+                <br>
+                <label for="Description">Description:</label>
+                <input type="text" name="Description" required>
+                <br>
+                <label for="Task">Task:</label>
+                <input type="text" name="Task" required>
+                <br>
+                <label for="Document">Document:</label>
+                <input type="text" name="Document" required>
+                <br>
+                <button type="submit">Add Discipline</button>
+            </form>
+            <button id="closePopup">Close</button>
+        </dialog>
+
+        <button id="openPopup">Open Add Discipline Popup</button>
+        </form>
+<script>
+        const openPopupButton = document.getElementById('openPopup');
+        const closePopupButton = document.getElementById('closePopup');
+        const popup = document.getElementById('addDisciplinePopup');
+
+        openPopupButton.addEventListener('click', () => {
+            popup.showModal();
+        });
+
+        closePopupButton.addEventListener('click', () => {
+            popup.close();
+        });
+    </script>
+</body>
+</html>
+

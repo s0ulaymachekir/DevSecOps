@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Search</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='client.css') }}">
+</head>
+<body>
+<div class ="barre-sup">
+        <div class="gauche">
+            <div class="logo">
+                    <img src="https://d2cljsw7d0z1ty.cloudfront.net/fileadmin/themes/default/img/logo-group-ips.svg" alt="Logo">
+                </div>
+        </div>
+    <div class="droit">
+            <a href="/home1" class="c5">Home</a>
+            <a href="/admin" class="c5">Profil Admin</a>
+        </div>
+    </div>
+    <main>
+        <form action="/client" method="post" class="container">
+            <h1>Client Search</h1>
+            <label for="search_term">Search Term:</label>
+            <input type="text" name="search_term" id="search_term" required>
+            <button type="submit">Search</button>
+
+
+        <div class="project-list">
+    <h2>Search Results:</h2>
+    {% if projects %}
+        <ul class="project-items">
+            {% for project in projects %}
+                <li class="project-item">
+                    <span class="project-ref">{{ project[0] }}</span>
+                    <a class="project-link" href="{{ url_for('project_details', ref=project[0]) }}">Details</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p class="no-projects">No projects found.</p>
+    {% endif %}
+</div>
+        </form>
+
+    </main>
+</body>
+</html>

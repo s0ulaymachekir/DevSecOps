@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="an">
+<head>
+    <link rel="icon" href="{{ url_for('static', filename='profile.jpg') }}" type="image/jpg">
+    <title>Administration page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylea.css') }}">
+</head>
+<body>
+        <div class ="barre-sup">
+        <div class="gauche">
+            <div class="logo">
+                    <img src="https://d2cljsw7d0z1ty.cloudfront.net/fileadmin/themes/default/img/logo-group-ips.svg" alt="Logo">
+                </div>
+        </div>
+    <div class="droit">
+            <a href="/home2" class="c0">Home</a>
+            <a href="/Gdiscipline" class="c1">Gestion des disciplines</a>
+            <a href="/Gmembres" class="c2">Gestion des membres</a>
+            <a href="/Grole" class="c3">Gestion des roles</a>
+            <a href="/Gprojects" class="c4">Gestion des projets</a>
+        <a href="/admin" class="c5">Profil Admin</a>
+
+        </div>
+    </div>
+   
+        <form action="/admin" method="POST" class="container">
+            <div class="boxr">
+        <h1>User Details :</h1>
+        <p><strong style="color: darkblue;">First Name :</strong> {{ user[0] }}</p>
+        <p><strong style="color: darkblue;">Last Name :</strong> {{ user[1] }}</p>
+        <p><strong style="color: darkblue;">Email :</strong> {{ user[2] }}</p>
+        <p><strong style="color: darkblue;">Project Name :</strong> {{ user[3] }}</p>
+        <p><strong style="color: darkblue;">Roles :</strong> {{ user[4] }}</p>
+        <p><strong style="color: darkblue;">Password :</strong> {{ user[5] }}</p>
+           <a href="/logout" class="button">LogOut</a>
+            </div>
+            <div class="boxl"> </div>
+        </form>
+</body>
+</html>
+

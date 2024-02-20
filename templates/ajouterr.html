@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="an">
+<head>
+    <link rel="icon" href="{{ url_for('static', filename='tasks.jpg') }}" type="image/jpg">
+    <title>New Role</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylear.css') }}">
+</head>
+<body>
+ <div class ="barre-sup">
+        <div class="gauche">
+            <div class="logo">
+                    <img src="https://d2cljsw7d0z1ty.cloudfront.net/fileadmin/themes/default/img/logo-group-ips.svg" alt="Logo">
+                </div>
+        </div>
+    <div class="droit">
+            <a href="/home2" class="c0">Home</a>
+            <a href="/Gdiscipline" class="c1">Gestion des disciplines</a>
+            <a href="/Gmembres" class="c2">Gestion des membres</a>
+            <a href="/Grole" class="c3">Gestion des roles</a>
+            <a href="/Gprojects" class="c4">Gestion des projets</a>
+        <a href="/admin" class="c5">Profil Admin</a>
+
+        </div>
+    </div>
+    <form action="/ajouterr" method="POST" class="container">
+        <h1>Add New Role</h1>
+        <div class="inputBox">
+           <select name="Category" required>
+                <option value="" disabled selected></option>
+                <option value="approvateur">Approval</option>
+                <option value="verificateur">Reviewer</option>
+                <option value="auteur">Author</option>
+            </select>
+            <label for="Category">roles</label>
+        </div>
+        <div class="inputBox">
+         <input type="text" name="Description" autocomplete="off" required>
+                    <label for="Description">Description</label>
+        </div>
+      <button class="button">Add New</button>
+    </form>
+</body>
+</html>

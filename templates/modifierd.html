@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="an">
+<head>
+   <link rel="icon" href="{{ url_for('static', filename='tasks.jpg') }}" type="image/jpg">
+    <title>Edit Discipline</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylead.css') }}">
+</head>
+<body>
+  <div class ="barre-sup">
+        <div class="gauche">
+            <div class="logo">
+                    <img src="https://d2cljsw7d0z1ty.cloudfront.net/fileadmin/themes/default/img/logo-group-ips.svg" alt="Logo">
+                </div>
+        </div>
+    <div class="droit">
+            <a href="/home2" class="c0">Home</a>
+            <a href="/Gdiscipline" class="c1">Gestion des disciplines</a>
+            <a href="/Gmembres" class="c2">Gestion des membres</a>
+            <a href="/Grole" class="c3">Gestion des roles</a>
+            <a href="/Gprojects" class="c4">Gestion des projets</a>
+        <a href="/admin" class="c5">Profil Admin</a>
+
+        </div>
+    </div>
+
+    <form action="/modifierd/{{ row[0] }}" method="post" class="container">
+        <h1>Edit Discipline</h1>
+        <div class="inputBox">
+            <input type="text" name="Code" value="{{ row[0] }}" autocomplete="off" required>
+            <label for="Code">Code</label>
+        </div>
+        <div class="inputBox">
+            <input type="text" name="Description" value="{{ row[1] }}" autocomplete="off" required>
+            <label for="Description">Description</label>
+        </div>
+        <button class="button" >Modify</button>
+    </form>
+
+</body>
+</html>
