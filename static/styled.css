@@ -1,0 +1,162 @@
+/* Reset default margin and padding for elements */
+body, h1, h2, table, th, td, div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+.barre-sup {
+  background-color: lightskyblue;
+  display: flex;
+  padding: 0;
+  width: 100%;
+  justify-content: space-between;
+}
+.droit {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Aligne les boutons à droite */
+  gap: 10px; /* Espace entre les boutons */
+}
+
+.gauche {
+  padding: 20px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+}
+h1 {
+  text-align: left;
+  padding: 20px;
+  color: darkblue;
+}
+.container{
+    position: fixed;
+    width: 70%; /* Ajuster la largeur du LoginScreen */
+    height: 70%; /*Ajuster l'hauteur*/
+    background-color: #fff; /* Mettre le fond en blanc */
+
+  display: flex;
+/*position dans la page*/
+ top: 50%;
+    left: 50%;
+buttom: 25px;
+     transform: translate(-50%, -40%);
+    align-items: center; /*tout les elements au centre */
+    justify-content: center;
+
+border-radius: 10px;/* les coins arrondis */
+box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3); /* box shadow */
+
+}
+.c0,.c1,.c2,.c3,.c4{
+  padding: 15px 15px;
+  color: darkblue;
+  box-shadow: 0 2px 4px 5px rgba(0, 0, 0.3, 0);
+  text-decoration: none;
+  font-weight: bold; /* Make the text bold */
+}
+
+.c5{
+  padding: 15px 15px;
+    text-decoration: none;
+    color: darkblue;
+    font-weight: bold; /* Make the text bold */
+    background-color: white;
+    box-shadow: 0 2px 4px 5px rgba(0, 0, 0.3, 0);
+  border-radius: 5px;
+  border: 2px solid darkblue;
+}
+
+table {
+  width: 95%;
+  height: 70%;
+  margin: 20px auto;
+  border-collapse: revert;
+  box-shadow: 0 0 5px gainsboro;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: white;
+  color: darkblue;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+  background-color: white; /* Slightly different color for odd rows */
+}
+/* Styling the 'Supprimer' button inside the table */
+td a.delete {
+  display: inline-block;
+  margin-left: 10px;
+  background-color: red;
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 10px;
+}
+
+td a.mod:hover {
+  background-color: #45a049;
+}
+
+
+/* Styling the 'Modify' link inside the table */
+td a.mod {
+  display: inline-block;
+  margin-left: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 10px;
+}
+
+td a.mod:hover {
+  background-color: #45a049;
+}
+/* Styling the 'Add' link */
+a.ajout {
+  position: absolute;
+  display: block;
+  text-align: center;
+  background-color: dodgerblue;
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  top: 20px;
+  left: 20px;
+}
+
+a.ajout:hover {
+  background-color: lightsteelblue;
+}
+
+form {
+
+  transition: box-shadow ease-in 0.2s;
+}
+
+form:hover {
+  box-shadow: 0 2px 4px 5px rgba(0, 0, 0, 0.3);
+border-radius: 10px;
+}

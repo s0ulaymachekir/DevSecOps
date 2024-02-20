@@ -1,0 +1,106 @@
+/* Reset default margin and padding for elements */
+body, h1, h2, table, th, td, div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("5.jpg");
+  background-size: cover;
+}
+
+.barre-sup {
+  background-color: transparent;
+  display: flex;
+  padding: 0;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.gauche {
+  padding: 20px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+}
+
+.c5{
+  padding: 15px 15px;
+    text-decoration: none;
+    color: darkblue;
+    font-weight: bold; /* Make the text bold */
+    background-color: white;
+    box-shadow: 0 2px 4px 5px rgba(0, 0, 0.3, 0);
+  border-radius: 5px;
+  border: 2px solid darkblue;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+.container {
+     position: fixed;
+    width: 50%; /* Ajuster la largeur du LoginScreen */
+    height: 50%; /*Ajuster l'hauteur*/
+   top: 45%;
+    left: 50%;
+    buttom: 25px;
+     transform: translate(-50%, -40%);
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 30px;
+  border-color: whitesmoke;
+  border-radius: 15px;
+}
+
+.boxr{
+  position: fixed;
+  width: 60%;
+  height: 100%;
+  top: 0;
+  left: 40%;
+  flex: 1;
+  border-radius: 0 15px 15px 0;
+  background-image: url("task.jpg");
+  background-position: 50% ;
+  background-size: 120% 130%
+}
+
+.boxl{
+    position: fixed;
+  width: 40%;
+  height: 100%;
+  background-color: rgb(103, 193, 253);
+  top: 0;
+  left: 0;
+  flex: 1;
+  border-radius: 15px 0 0 15px;
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+  justify-content: center;
+ 
+}
+
+.button {
+  background: darkblue;
+  outline: none;
+  color: gainsboro;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px 5px rgba(0, 0, 0.3, 0);
+  align-self: center;
+    margin-left: 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: cornflowerblue;
+}

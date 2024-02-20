@@ -1,0 +1,139 @@
+body, h1, div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+   background-color: white;
+}
+
+.barre-sup {
+  background-color: lightskyblue;
+  display: flex;
+  padding: 0;
+  width: 100%;
+  justify-content: space-between;
+}
+.droit {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Aligne les boutons à droite */
+  gap: 10px; /* Espace entre les boutons */
+}
+.c0,.c1,.c2,.c3,.c4{
+  padding: 15px 15px;
+  color: darkblue;
+  box-shadow: 0 2px 4px 5px rgba(0, 0, 0.3, 0);
+  text-decoration: none;
+  font-weight: bold; /* Make the text bold */
+}
+
+.c5{
+  padding: 15px 15px;
+    text-decoration: none;
+    color: darkblue;
+    font-weight: bold; /* Make the text bold */
+    background-color: whitesmoke;
+    box-shadow: 0 2px 4px 5px rgba(0, 0, 0.3, 0);
+  border-radius: 5px;
+  border: 2px solid darkblue;
+}
+.gauche {
+  padding: 20px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+}
+.boxr{
+  position: fixed;
+  width: 40%;
+  height: 100%;
+  top: 0;
+  left: 60%;
+  flex: 1;
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+  justify-content: center;
+  
+}
+
+.boxl{
+    position: fixed;
+    left: 0;
+  width: 60%;
+  height: 100%;
+  background-image: url("6.png");
+  background-position: 50% 50%;
+  background-size: 100% 110%;
+  border-radius:  15px 0 0 15px;
+}
+
+h1 {
+  text-align: left;
+  padding: 20px;
+  color: cornflowerblue;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+p {
+    margin: 15px 0;
+}
+.container {
+    position: absolute;
+    width: 60%; /* Ajuster la largeur du LoginScreen */
+    height: 70%; /*Ajuster l'hauteur*/
+    background-color: whitesmoke; /* Mettre le fond en blanc */
+    /*position dans la page*/
+    top: 50%;
+    left: 50%;
+    display: flex;
+    transform: translate(-50%, -40%);
+    flex-direction: column;
+    align-items: center; /*tout les elements au centre */
+    justify-content: center;
+
+    border-radius: 10px; /* les coins arrondis */
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3); /* box shadow */
+}
+
+.button {
+  background: darkblue;
+  outline: none;
+  color: gainsboro;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px 5px rgba(0, 0, 0.3, 0);
+  align-self: center;
+    margin-left: 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    text-decoration: none;
+}
+
+.button:hover {
+  background-color: cornflowerblue;
+}
+
+/*La deuxième animation est l'ombre qui s'étend lorsque vous survolez le formulaire*/
+form {
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+  transition: box-shadow ease-in 0.2s;
+}
+
+form:hover {
+  box-shadow: 0 10px 20px 2px rgba(0, 0, 0, 0.5);
+}
+
