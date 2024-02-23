@@ -7,7 +7,7 @@ mysql-connector
 flask
 Werkzeug
 gunicorn
-
+pytest==6.6.2
 flask_mysqldb
 
 
