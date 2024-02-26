@@ -26,8 +26,8 @@ services:
      # - MYSQL_USER=root
     #  - MYSQL_PASSWORD=55889528
 
-    networks:
-      - my-network
+    #networks:
+      #- my-network
  # phpmyadmin:
      #depends_on:
      # - mysqldb
