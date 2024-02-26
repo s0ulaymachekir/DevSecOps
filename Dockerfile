@@ -1,6 +1,6 @@
 FROM python:3.9-slim
-WORKDIR /app
-COPY . /app
+WORKDIR /home/app
+COPY . .
 # Create a new sources.list file with Debian Buster repository
 RUN echo "deb http://deb.debian.org/debian buster main" > /etc/apt/sources.list
 # Install system dependencies
