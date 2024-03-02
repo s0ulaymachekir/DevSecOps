@@ -5,8 +5,8 @@ services:
         context: .
      ports:
         - "5000:5000"  
-     depends_on:
-      - mysqldb
+     #depends_on:
+     # - mysqldb
      restart: unless-stopped
      networks:
       - my-network
