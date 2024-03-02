@@ -1,6 +1,7 @@
 #version : "3"
 services: 
   app:
+     image: soulaymach/flaskapp:flaskapp
      build: 
         context: .
      ports:
