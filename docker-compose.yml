@@ -43,7 +43,6 @@ services:
     #   - my-network
 networks:
   my-network:
-     name: my-network
      driver: bridge
      
 volumes:
