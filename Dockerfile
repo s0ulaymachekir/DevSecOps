@@ -17,6 +17,9 @@ RUN apt-get update && \
     default-libmysqlclient-dev \
     && rm -rf /var/lib/apt/lists/*
 RUN pip install -r requirements.txt
+# Install Node.js
+RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
+RUN apt-get install -y nodejs
 WORKDIR /home/app
 COPY . .
 CMD gunicorn --bind 0.0.0.0:5000 app:app
